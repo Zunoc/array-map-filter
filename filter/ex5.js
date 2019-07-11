@@ -39,6 +39,21 @@ Exemple d'entrée:
  */
 
 function searchWordFilter(items, search) {
+
+	const wordFilter = items.filter(function(item) {
+		
+		var searchUpperCase = search.charAt(0).toUpperCase() + search.slice(1);		
+		var index = item.indexOf(search) ;
+		var indexUpperCase = item.indexOf(searchUpperCase) 
+		
+		
+		if ( index !== -1 || indexUpperCase !== -1) {
+
+			return item ;
+
+		}
+	});
+	return wordFilter
 }
 
 // Ne pas modifier l'export

@@ -21,12 +21,18 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
+function getStringsLength(chaine) {
+	
+	const lengths = chaine.map(function(word) {
+		return word + " contains " + word.length + " characters"
+	});
+
+	return lengths;
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1
-// console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
+//console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
 
 // Ne pas modifier l'export
 module.exports = getStringsLength;
